@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { Country } from './classes/country';
 
 @Component({
@@ -8,11 +8,14 @@ import { Country } from './classes/country';
   styleUrls: ['./css/country-detail.component.css']
 })
 
-export class CountryDetailComponent {
+export class CountryDetail {
   @Input() inputCountry: Country;
-  title = 'test';
 
-  ngOnInit() {
-    
+  constructor (
+    private router: Router
+  ) { }
+
+  gotoDetail(): void {
+    this.router.navigate(['/details', this.inputCountry.alpha3Code]);
   }
 }

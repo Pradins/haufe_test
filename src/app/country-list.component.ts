@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryService } from './services/country.service';
-import { CountryDetailComponent } from './country-detail.component';
+import { CountryDetail } from './country-detail.component';
 
 import { Country } from './classes/country';
 

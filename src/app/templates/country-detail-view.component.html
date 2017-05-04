@@ -1,0 +1,44 @@
+
+<section class="container">
+  <div class="" style="text-align: center;">
+    <div class="backButtonDiv">
+        <button (click)="goBack()" type="button" name="button"> < Back</button>
+    </div>
+    <hr>
+    <div *ngIf="countryDetail" class="countryContent">
+      <div class="">
+        <h1>{{countryDetail.name}}</h1>
+        <img class="svgFlagImage" [src]="countryDetail.flag" />
+        <h4>{{countryDetail.nativeName}}</h4>
+      </div>
+      <div class="leftColumn">
+        <p><strong>Region:</strong> {{countryDetail.region}}</p>
+        <p><strong>Capital:</strong> {{countryDetail.capital}} <span *ngIf="!countryDetail.capital"> - </span></p>
+        <p><strong>Population:</strong> {{countryDetail.population}} <span *ngIf="!countryDetail.population"> - </span></p>
+      </div>
+      <div class="rightColumn">
+        <p>
+          <strong>Borders:</strong>
+          <span *ngFor="let border of countryDetail.borders; let l = last;">
+            {{border}} <span *ngIf="!l">,</span>
+          </span>
+
+          <!-- if not borders -->
+          <span *ngIf="countryDetail.borders?.length == 0"> - </span>
+
+        </p>
+        <p>
+          <strong>Alt. spellings: </strong>
+          <span *ngFor="let spelling of countryDetail.altSpellings; let l = last">
+            {{spelling}} <span *ngIf="!l">,</span>
+          </span>
+
+          <!-- if not altSpellings -->
+          <span *ngIf="countryDetail.altSpellings?.length == 0"> - </span>
+
+        </p>
+        <p><strong>Currency: </strong>{{countryDetail.currencies[0].name}}, {{countryDetail.currencies[0].symbol}}</p>
+      </div>
+    </div>
+  </div>
+</section>

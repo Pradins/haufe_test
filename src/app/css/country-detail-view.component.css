@@ -1,0 +1,56 @@
+* {
+  margin:0;
+  padding:0;
+  font-family: 'Roboto', sans-serif;
+  line-height:1.0;
+  vertical-align:middle;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.countryContent {
+  margin-top:  20px;
+  padding-bottom: 20px;
+}
+
+.backButtonDiv {
+  padding-bottom: 2em;
+}
+
+button {
+  padding: 0.5em;
+  float:left;
+}
+
+.container {
+  border:0.1px solid grey;
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  padding: 10px;
+  margin:auto;
+  margin-top: 2em;
+}
+
+.leftColumn {
+  float:left;
+  position:relative;
+  width: 50%;
+  text-align: center;
+}
+
+.rightColumn {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+
+.svgFlagImage {
+  width:  20%;
+  height: 20%;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}

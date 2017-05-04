@@ -28,7 +28,7 @@ router.get('/country/:code', function (req, res) { //search by its alpha3Code
         if (err) throw err;
         var obj = JSON.parse(data);
         obj = _.where(obj, {alpha3Code: code});
-
+        obj = _.map(obj, function(o) { return _.pick(o, 'name','alpha3Code', 'capital', 'population', 'nativeName', 'flag', 'topLevelDomain', 'altSpellings', 'region', 'borders', 'currencies')});
         if(obj.length == 0) { //country not found
             res.status(404).send('Not found');
         } else {
@@ -36,6 +36,5 @@ router.get('/country/:code', function (req, res) { //search by its alpha3Code
         }
     });
 });
-
 
 module.exports = router;

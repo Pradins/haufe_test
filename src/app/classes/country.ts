@@ -6,5 +6,3 @@ export class Country {
   nativeName: String;
   frag: String;
 }
-
-// la classe detailed country sera un extends daquesta, me la saco encima de la mesa
