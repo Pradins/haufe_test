@@ -4,12 +4,9 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 ## Instructions to build and run
 
-npm install
+1. npm install
+2. ng build 
+3. node app.js
 
-ng build 
-
-node app.js
-
-site is at "localhost:3000"
-
-api is at "localhost:3000/api"
+### site is at "localhost:3000"
+### api is at "localhost:3000/api"
