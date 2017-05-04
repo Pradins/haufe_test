@@ -1,0 +1,13 @@
+<div class="">
+  <div *ngIf="!inputCountry">Select a country to see its details</div>
+
+  <div *ngIf="inputCountry">
+    <h1>{{inputCountry.name}}</h1>
+    <img class="svgFlagImage" [src]="inputCountry.flag" />
+    <h4>{{inputCountry.nativeName}}</h4>
+    <p><strong>Alpha3Code: </strong>{{inputCountry.alpha3Code}}</p>
+    <p><strong>Capital: </strong>{{inputCountry.capital}}</p>
+    <p><strong>Population: </strong>{{inputCountry.population}}</p>
+    <button type="button" name="button">More details</button>
+  </div>
+</div>

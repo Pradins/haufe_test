@@ -1,0 +1,20 @@
+<h1>
+  {{title}}
+</h1>
+
+<section class="container">
+    <div class="one">
+      <input type="text" id="masterListFilter" placeholder="filter by country" [(ngModel)]="filterValue" (input)="filterItem(filterValue)">
+      <nav>
+        <ul>
+          <li *ngFor="let country of filteredItems" [class.selected]="country === selectedCountry" (click)="onSelect(country)">
+            <span>{{country.name}}</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="two">
+      <country-detail [inputCountry]="selectedCountry"></country-detail>
+    </div>
+    <div style="clear:both;"></div>
+</section>

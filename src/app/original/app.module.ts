@@ -3,24 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-//services
-import { CountryService } from './services/country.service';
-
-//components
-import { CountryList } from './country-list.component';
-import { CountryDetailComponent } from './country-detail.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    CountryList,
-    CountryDetailComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [CountryService],
-  bootstrap: [CountryList]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
